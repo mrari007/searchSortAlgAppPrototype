@@ -4,7 +4,7 @@ searching and sorting algorithms. It is a prototype of a web-based multimedia ap
 This application was the main project for one of my university courses.
 
 While doing it gained knowledge in the following fields:
--HTML
+-HTML /n
 -CSS
 -JavaScript
 -Bootstrap
