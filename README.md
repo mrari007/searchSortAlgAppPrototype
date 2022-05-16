@@ -1,7 +1,7 @@
 # searchSortAlgAppPrototype
 Searching and Sorting Algorithms with Java is an interactive instructional course about
-searching and sorting algorithms. It is a prototype of a web-based multimedia application.
-This application was the main project for one of my university courses. <br/> <br/>
+searching and sorting algorithms. It is a prototype of a web-based multimedia application. <br/>
+This application was the main project for one of my university courses. <br/>
 
 While doing it gained knowledge in the following fields: <br/>
 -HTML <br/>
