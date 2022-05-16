@@ -1,0 +1,129 @@
+.text-styling{
+    font-family: Verdana;
+    font-size: 15px;
+}
+
+h1 {
+    text-align: center;
+    font-weight: bold;
+}
+
+h4 {
+    font-weight: bold;
+}
+
+.navbar-brand {
+    padding-left: 4%;
+}
+
+.navbar-nav{
+    font-size: 18px;
+    font-style: inherit;
+    font-family: sans-serif;
+    padding-right: 4%;
+}
+
+#intro{
+    text-align: center;
+    outline: none;
+    line-heigth: 0.6em;
+    animation: whiteGlowAnimation 4s forwards;
+}
+
+@keyframes whiteGlowAnimation {
+    0% {
+        color: white;
+        text-shadow: none;
+    }
+    100%{
+        color: white;
+        text-shadow: 0 0 10px #f6f6f6,
+        0 0 5px #5c5a5a,
+        0 0 15px #f6f6f6,
+        0 0 25px #5c5a5a,
+        0 0 31px #f6f6f6;
+    }
+
+}
+
+@keyframes darkGlowAnimation {
+    0% {
+        color: 	#212529;
+        text-shadow: none;
+    }
+    100%{
+        color: 	#212529;
+        text-shadow: 0 0 10px 	#212529,
+        0 0 10px #f6f6f6,
+        0 0 20px #373a3e,
+        0 0 40px #212529,
+        0 0 60px #212529,
+        0 0 80px #212529;
+    }
+
+}
+
+#bigO{
+    text-align: center;
+    outline: none;
+    line-heigth: 0.6em;
+    animation: darkGlowAnimation 4s forwards;
+}
+
+.whiteBg{
+    color: #212529;
+    text-decoration: underline;
+}
+.whiteBg:hover{
+    color: #6363f5;
+    font-weight: bold;
+}
+
+.darkBg{
+    color: #e0dada;
+    text-decoration: underline;
+}
+.darkBg:hover{
+    color: #6363f5;
+    font-weight: bold;
+}
+
+.slideText {
+    color: #e0dada;
+    font-size: 3.5em;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+    animation: whiteGlowAnimation 2s infinite alternate;
+}
+.hiddenText {
+    position: absolute;
+    top:0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: 1s ease;
+    background-color: #212529;
+}
+.layerSwap:hover .hiddenText {
+    opacity: 1;
+}
+
+.myButtons{
+    margin-right: 20px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+#myVideo {
+    width: 50%;
+    height: 50%;
+}
+
+.video {
+    text-align: center;
+}

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+        rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+        crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+  <title>Search/Sort Algorithms</title>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <img src="Media/logoJ.png" class="navbar-brand" width="185px" height="105px">
+
+    <!-- the hamburger button-->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#myBar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="myBar">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a href="index.html" class="nav-link">Home</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a  id="searchDrop"  class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Searching Algorithms
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="searchDrop">
+            <li>
+              <a class="dropdown-item" data-bs-toggle="collapse" data-bs-target="#linear" href="#linear">Sequential Search</a>
+            </li>
+            <li>
+              <a class="dropdown-item"  data-bs-toggle="collapse"  data-bs-target="#binary" href="#binary">Binary Search</a>
+            </li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a id="sortDrop" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Sorting Algorithms
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="sortDrop">
+            <li>
+              <a href="Sort.html" class="dropdown-item">Bubble Sort</a>
+            </li>
+            <li>
+              <a href="Sort.html" class="dropdown-item">Selection Sort</a>
+            </li>
+            <li>
+              <a href="Sort.html" class="dropdown-item">Insertion Sort</a>
+            </li>
+            <li>
+              <a href="Sort.html" class="dropdown-item">Merge Sort</a>
+            </li>
+            <li>
+              <a href="Sort.html" class="dropdown-item">Quick Sort</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Second Section, that provides information about searching algorithms-->
+<section class="bg-dark text-white">
+  <div class="container">
+    <h1>Searching algorithms</h1><br>
+    <p>In computer science a search algorithm is any algorithm that solves the search problem. Namely to retrieve information stored in some data structure.
+      The appropriate search algorithm often depends on the data structure being searched and prior knowledge about the data.
+      Search algorithms can be classified based on their mechanism of searching:
+    </p>
+    <ul>
+      <li>Linear search algorithms- check every record for the one associated with a target key in a linear fashion</li>
+      <li>Binary search algorithms- repeatedly target tge center of the searched structure and divide the search space in half</li>
+      <li>Hashing algorithms- map keys to records based on a hash function</li>
+    </ul>
+    <h2>Implications</h2>
+    <ul>
+      <li>Checking to see if a given value is present in a set of values</li>
+      <li>Finding the maximum or minimum value in a list or array</li>
+      <li>Retrieving a record from a database</li>
+      <li>Optimizing an industrial process, such as a chemical reaction, by changing the parameters of the process (like temperature, pressure, and pH)</li>
+
+    </ul>
+  </div>
+  <br>
+</section>
+
+<!-- The buttons that toggle the Fourth Section's contents-->
+<section class="bg-white p-3">
+  <div class="container text-center">
+    <a class="btn btn-dark myButtons btn-lg" role="button"  data-bs-toggle="collapse" data-bs-target="#linear" href="#linear">Sequential Search</a>
+    <a class="btn btn-dark myButtons btn-lg" role="button"  data-bs-toggle="collapse" data-bs-target="#binary" href="#binary">Binary Search</a>
+  </div>
+</section>
+
+<!-- Fourth Section-->
+<section class="bg-white text-dark" id="myColGroup">
+
+  <!-- linear scene-->
+  <div id="linear" class="collapse pt-4 pb-3 container" data-bs-parent="#myColGroup">
+    <div class="video">
+      <video class="w-75 text-center" src="Media/sequential%20search.mp4" id="myVideo" controls></video>
+
+      <!-- Buttons to manipulate the video-->
+      <div class="pt-2">
+        <button type="button" class="btn btn-outline-dark" onclick="document.getElementById('myVideo').play()">Play</button>
+        <button type="button" class="btn btn-outline-dark" onclick="document.getElementById('myVideo').pause()">Pause</button>
+        <button type="button" class="btn btn-outline-dark" onclick="document.getElementById('myVideo').load()">Rewind</button>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row pt-5 pb-3">
+
+        <!-- Text description for sequential search-->
+        <div class="col-md-5">
+            <p>A Linear search or Sequential search is a method for finding an element within a list. It sequentially checks each element of the list until a match is found or the whole list has been searched.
+              A linear search runs in at worst linear time and makes at most n comparisons, where n is the length of the list. If each element is equally likely to be searched, then linear search has an average case of
+              n+1/2 comparisons, but the average case can be affected if the search probabilities for each element vary. Linear search is rarely practical because other search algorithms and schemes, such as the binary
+              search algorithm and hash tables, allow significantly faster searching for all but short lists.</p>
+            <ul>
+              <li>Worst-case performance: O(n)</li>
+              <li>Best-case performance: O(1)</li>
+              <li>Average-case performance: O(n/2)</li>
+              <li>Worst-case space complexity: O(1)</li>
+            </ul>
+          </div>
+        <div class="col-md-1">
+        </div>
+
+        <!-- Code snippet for sequential search-->
+        <div class="col-md-6 text-center">
+            <h4 class="text-dark">Code in Java:</h4> <br>
+            <img class="d-block w-100" src="Media/sequential.png" alt="Seq O error">
+        </div>
+        </div>
+      </div>
+
+    <!-- Return to top button-->
+    <div class="container text-center">
+        <button id="toTopBtn" onclick="returnToTop()" type="button" class="btn btn-outline-dark">Return back to top</button>
+    </div>
+  </div>
+
+  <!-- binary scene-->
+  <div id="binary" class="collapse pt-5 pb-3 container panel" data-bs-parent="#myColGroup">
+    <h2>Here goes the same structure as the one triggered by the sequential search button, but with information about binary search algorithm</h2>
+  </div>
+</section>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous">
+</script>
+<script src="myScript.js"></script>
+</body>
+</html>

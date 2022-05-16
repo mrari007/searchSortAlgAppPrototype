@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+        rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+        crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+  <title>Search/Sort Algorithms</title>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <img src="Media/logoJ.png" class="navbar-brand" width="185px" height="105px">
+    
+    <!-- the hamburger button-->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#myBar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="myBar">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a href="index.html" class="nav-link">Home</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" id="searchDrop" role="button" data-bs-toggle="dropdown" aria-expanded="false">Searching Algorithms</a>
+          <ul class="dropdown-menu" aria-labelledby="searchDrop">
+            <li>
+              <a href="Search.html" class="dropdown-item">Sequential Search</a>
+            </li>
+            <li>
+              <a href="Search.html" class="dropdown-item">Binary Search</a>
+            </li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a id="sortDrop" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Sorting Algorithms
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="sortDrop">
+            <li>
+              <a class="dropdown-item" data-bs-toggle="collapse" data-bs-target="#bubble" href="#bubble">Bubble Sort</a>
+            </li>
+            <li>
+              <a class="dropdown-item" data-bs-toggle="collapse" data-bs-target="#selection" href="#selection">Selection Sort</a>
+            </li>
+            <li>
+              <a class="dropdown-item" data-bs-toggle="collapse" data-bs-target="#insertion" href="#insertion">Insertion Sort</a>
+            </li>
+            <li>
+              <a class="dropdown-item" data-bs-toggle="collapse" data-bs-target="#merge" href="#merge">Merge Sort</a>
+            </li>
+            <li>
+              <a class="dropdown-item" data-bs-toggle="collapse" data-bs-target="#quick" href="#quick">Quick Sort</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<section class="bg-dark text-white">
+  <div class="container">
+    <h1>Sorting algorithms</h1><br>
+    <p>A Sorting Algorithm is used to rearrange a given array or list data structure elements according to a particular patter (for e.g ascending or descending order).
+      The comparison operator is used to decide the new order of elements in the respective data structure. Sorting algorithms can be classified based on different concepts.
+    </p>
+    <h2>Classification</h2>
+    <ul>
+      <li>Computational complexity - best, worst and average case behavior in terms of the size of the list.</li>
+      <li>Memory usage - in terms of memory, algorithms can be classified as "in-place" or "out-of-place". "In-place" sorting algorithms works on the initial list and updates
+      it only through replacement or swapping of elements (Bubble sort is an example of an "in-place" algorithm). "Out-of-place" algorithms consume more memory: they are not working only on the initial lists but create new ones. Merge sort is an "out-of-place" algorithm.</li>
+      <li>Stability: stable sorting algorithms maintain the relative order of records with equal keys</li>
+      <li>Whether or not they are a comparison sort. A comparison sort examines the data only by comparing two elements with a comparison operator.</li>
+    </ul>
+    <h2>Why do we need sorting algorithms?</h2>
+    <ul>
+      <li>Efficient sorting is important for optimizing tge efficiency of other algorithms which require input data to be in sorted lists</li>
+      <li>Producing more human readable output.</li>
+      <li>It is easier and faster to locate items in a sorted list than unsorted</li>
+    </ul>
+  </div>
+  <br>
+</section>
+
+
+<section class="bg-white p-3">
+  <div class="container text-center">
+    <a class="btn btn-dark myButtons btn-lg" role="button"  data-bs-toggle="collapse" data-bs-target="#bubble" href="#bubble">Bubble Sort</a>
+    <a class="btn btn-dark myButtons btn-lg" role="button"  data-bs-toggle="collapse" data-bs-target="#selection" href="#selection">Selection Sort</a>
+    <a class="btn btn-dark myButtons btn-lg" role="button"  data-bs-toggle="collapse" data-bs-target="#insertion" href="#insertion">Insertion Sort</a>
+    <a class="btn btn-dark myButtons btn-lg" role="button"  data-bs-toggle="collapse" data-bs-target="#merge" href="#merge">Merge Sort</a>
+    <a class="btn btn-dark myButtons btn-lg" role="button"  data-bs-toggle="collapse" data-bs-target="#quick" href="#quick">Quick Sort</a>
+  </div>
+</section>
+
+<section class="bg-white text-dark" id="myColGroup">
+
+  <!-- bubble scene-->
+  <div id="bubble" class="collapse pt-4 pb-3 container" data-bs-parent="#myColGroup">
+    <div class="video">
+      <video class="w-75 text-center" src="Media/bubbleSort.mp4" id="vid" controls></video>
+
+      <!-- Buttons to manipulate the video-->
+      <div class="pt-2">
+        <button type="button" class="btn btn-outline-dark" onclick="document.getElementById('vid').play()">Play</button>
+        <button type="button" class="btn btn-outline-dark" onclick="document.getElementById('vid').pause()">Pause</button>
+        <button type="button" class="btn btn-outline-dark" onclick="document.getElementById('vid').load()">Rewind</button>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row pt-2 pb-3">
+
+        <!-- Text description for bubble sort-->
+        <div class="col-md-5">
+          <p>Bubble sort, sometimes referred to as sinking sort, is a simple sorting algorithm that repeatedly steps through the list, compares adjacent elements
+            and swaps them if they are in the wrong order. The pass through the list is repeated until the list is sorted. The algorithm, which is a comparison sort,
+            is named for the way smaller or larger elements "bubble" to the top of the list.</p>
+          <p>One of the main advantages of a bubble sort is that it is a very simple algorithm to describe to a computer. There is only really one task to perform
+            (compare two values and, if needed, swap them). This makes for a very small and simple computer program. The biggest problem with a bubble sort is that
+            it takes a very long time to run. For example, if there are 100 values to sort, each pass through the list will take 99 comparisons – and you might have to
+            repeat it 99 times.</p>
+          <ul>
+            <li>Worst-case performance: O(n<sup>2</sup>)</li>
+            <li>Best-case performance: O(n)</li>
+            <li>Average-case performance: On<sup>2</sup>)</li>
+            <li>Worst-case space complexity: O(1)</li>
+            <li>Stability: stable</li>
+            <li>It is iterative but can be implemented recursively as well</li>
+          </ul>
+        </div>
+        <div class="col-md-1"></div>
+
+        <!-- Code snippet for bubble sort-->
+        <div class="col-md-6 text-center">
+          <h4 class="text-dark">Code in Java:</h4> <br>
+          <img class="d-block w-100" src="Media/bubble.png" alt="Bubble O error">
+        </div>
+      </div>
+    </div>
+
+    <!-- Return to top button-->
+    <div class="container">
+      <div class="text-center">
+        <button id="toTopBtn" onclick="returnToTop()" type="button" class="btn btn-outline-dark">Return back to top</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- selection scene-->
+  <div id="selection" class="collapse pt-5 pb-3 container" data-bs-parent="#myColGroup">
+    <h2>Here goes the same structure as the one triggered by the bubble sort button, but with information about selection sort</h2>
+  </div>
+
+  <!-- insertion scene-->
+  <div id="insertion" class="collapse pt-5 pb-3 container" data-bs-parent="#myColGroup">
+    <h2>Here goes the same structure as the one triggered by the bubble sort button, but with information about insertion sort</h2>
+  </div>
+
+  <!-- merge scene-->
+  <div id="merge" class="collapse pt-5 pb-3 container" data-bs-parent="#myColGroup">
+    <h2>Here goes the same structure as the one triggered by the bubble sort button, but with information about merge sort</h2>
+  </div>
+
+  <!-- quick scene-->
+  <div id="quick" class="collapse pt-5 pb-3 container" data-bs-parent="#myColGroup">
+    <h2>Here goes the same structure as the one triggered by the bubble sort button, but with information about quick sort</h2>
+  </div>
+</section>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous">
+</script>
+<script src="myScript.js"></script>
+</body>
+</html>
